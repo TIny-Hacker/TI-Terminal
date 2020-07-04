@@ -1,0 +1,106 @@
+ClrHome
+" "->Str0
+" "->Str1
+Output(1,1,"TI-TERMINAL:"+Str2
+Pause 
+ClrHome
+While Str1!="EXIT()"
+	Input Str2+"$",Str1
+	Lbl 1
+	0->A
+	0->B
+	
+"PRINT('STR' OR VAR)
+If length(Str1)>=7:Then
+	If sub(Str1,1,6)="PRINT(":Then
+		If sub(Str1,7,1)="'":Then
+			Disp sub(Str1,8,length(Str1)-9
+			1->A
+		Else
+			Disp expr(sub(Str1,8,length(Str1-9
+		End
+	End
+End
+
+"USRCHNG(USR)
+If length(Str1)>=10:Then
+	If sub(Str1,1,8)="USRCHNG(":Then
+		If length(sub(Str1,9,length(Str1)-9))>=5:Then
+			Disp "ERR:LENGTH
+		Else
+			sub(Str1,9,length(Str1)-9)->Str2
+			Disp "USR:"+Str2
+		End
+		1->A
+	End
+End
+
+"EXIT()
+If Str1="EXIT()":Then
+	Disp "USR:"+Str2+" LOGGED","OUT."
+	Pause 
+	ClrHome
+	Return
+End
+
+"MATH(EXPR)
+If length(Str1)>=6:Then
+	If sub(Str1,1,5)="MATH(":Then
+		Disp ":::"+expr(sub(Str1,6,length(Str1)-6))
+		1->A
+	End
+End
+
+"GET(INST)
+If length(Str1)>=5:Then
+	If sub(Str1,1,4)="GET(":Then
+		
+		"(KEY)
+		If sub(Str1,5,length(Str1)-5)="KEY":Then
+			Repeat K
+				getKey->K
+			End
+			Disp K
+			1->B
+		End
+		
+		"(PXL,X,Y)
+		If sub(Str1,4,3)="PXL":Then
+			pxl-Test(expr(sub(Str1,9,2)),expr(sub(Str1,12,2)))->C
+			Disp C
+		End
+		2->A
+	End
+End
+
+"/    (HISTORY)
+If Str0!=" " and Str0!="/":Then
+	If Str1="/":Then
+		Disp ":>"+Str0
+		Pause 
+		Str0->Str1
+		3->A
+	End
+End
+
+"ERR:NO HISTORY
+If Str0=" " or Str0="/":Then
+	If Str1="/":Then
+		Disp "ERR:NO HISTORY
+		1->A
+	End
+End
+
+"ERR:COMMAND NOT FOUND.
+If not(A:Then
+	Disp "ERR:COMMAND NOT","FOUND."
+End
+
+"ERR:INST. NOT FOUND
+If A=2 and not(B:Then
+	Disp "ERR:INST. NOT","FOUND.
+End
+
+Str1->Str0
+If A=3:Goto 1
+End
