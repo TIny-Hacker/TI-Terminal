@@ -1,0 +1,13 @@
+Lbl 1
+ClrHome
+Disp "USERNAME<=4 CHARS"
+Input "USER: ",Str1
+
+If length(Str1)>=5:Then
+	Disp "ERR:LENGTH"
+	Goto 1
+End
+
+1->L1(1)
+ClrHome
+Disp "TI-TERMINAL","INSTALLED"
