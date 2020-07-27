@@ -31,14 +31,6 @@ If length(Str1)>=7:Then
 	End
 End
 
-"MATH(EXPR)
-If length(Str1)>=6:Then
-	If sub(Str1,1,5)="MATH(":Then
-		expr(sub(Str1,6,length(Str1)-6))->Str1
-		1->A
-	End
-End
-
 "GET(INST)
 If length(Str1)>=5:Then
 	If sub(Str1,1,4)="GET(":Then
