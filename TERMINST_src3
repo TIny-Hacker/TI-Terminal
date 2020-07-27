@@ -1,0 +1,8 @@
+" "->Str1
+ClrHome
+Lbl 1
+Input "USER <= 4 CHARS:",Str1
+If Str1=" "
+Goto 1
+Str1+"$ "->Str1
+ClrHome
