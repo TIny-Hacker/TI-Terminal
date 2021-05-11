@@ -5,15 +5,23 @@ forum thread on cemetech: https://www.cemetech.net/forum/viewtopic.php?p=286633
 
 # In this repostiory:
 CL_src1: The original source code for the list of commands.
+
 CL_src2: The updated source code for the list of commands.
+
 EXECLIB: A list the user will add programs they wish to execute from the terminal into.
 For more info on how to insert programs, see Adding Programs.
 README.md: The document you are reading now.
+
 TERMINAL_Source_1.txt: The original terminal, on the Home Screen.
+
 TERMINAL_src2: An updated terminal, moved to the Graph Screen.
+
 TERMINAL_src_3: Final updated terminal. WARNING: MAY HAVE A LOT OF BUGS!
+
 TERMINST_Source_1.txt: Original terminal installer.
+
 TERMINST_src2: More recent terminal installer.
+
 TERMINST_src3: Latest terminal installer.
 
 # A list of commands
